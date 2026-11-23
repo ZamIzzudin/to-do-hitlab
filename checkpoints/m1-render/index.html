@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Latihan live coding: To-Do List dengan DOM Manipulation JavaScript murni.">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="kartu">
+    <h1>To-Do List</h1>
+
+    <form id="todo-form">
+      <label class="sr-only" for="todo-input">Tulis tugas baru</label>
+      <input id="todo-input" type="text" placeholder="Tulis tugas baru..." autocomplete="off">
+      <button type="submit">Tambah</button>
+    </form>
+
+    <p id="jumlah-tugas"></p>
+
+    <ul id="todo-list"></ul>
+  </main>
+
+  <footer>
+    <small>Data hidup di memori dan segar setiap refresh (materi penyimpanan: sesi berikutnya)</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
