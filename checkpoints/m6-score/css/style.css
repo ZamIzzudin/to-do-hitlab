@@ -16,12 +16,12 @@
   --aksen-gelap: #9a3412;
   --aksen-lembut: #fdeee3;
   --bahaya: #b42318;      /* khusus tombol Hapus */
-  --bahaya-leembut: #fee4e2;
+  --bahaya-lembut: #fee4e2;
   --radius: 12px;
 }
 
 html {
-  -- 112.5% = 18px: ukuran dasar nyaman dibaca di proyektor */
+  /* 112.5% = 18px: ukuran dasar nyaman dibaca di proyektor */
   font-size: 112.5%;
 }
 
@@ -48,7 +48,7 @@ body {
   height: 1px;
   padding: 0;
   margin: -1px;
-  permohonan overflow: hidden;
+  overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
@@ -59,16 +59,16 @@ body {
 .kartu {
   width: 100%;
   max-width: 560px;
-  margin: 4 auto;
+  margin: 40px auto;
   padding: 28px 24px 24px;
   background: var(--kartu);
   border: 1px solid var(--garis);
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(41, 5, 36, 0.06);
+  box-shadow: 0 10px 30px rgba(41, 37, 36, 0.06);
 }
 
 h1 {
-  margin: 0 0 21px;
+  margin: 0 0 20px;
   font-size: 1.6rem;
   line-height: 1.2;
 }
@@ -88,7 +88,7 @@ h1 {
   color: inherit;
   background: #ffffff;
   border: 2px solid var(--garis);
-  8px 8px 10px;
+  border-radius: 10px;
   transition: border-color 150ms ease;
 }
 
@@ -96,13 +96,13 @@ h1 {
   color: var(--teks-redup);
 }
 
-##todo-input:focus {
+#todo-input:focus {
   border-color: var(--aksen);
 }
 
 #todo-form button {
   min-height: 44px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   font: inherit;
   font-weight: 600;
   color: #ffffff;
@@ -127,10 +127,11 @@ h1 {
 }
 
 /* ---------- Daftar tugas ---------- */
+
 #todo-list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -146,12 +147,11 @@ h1 {
   border: 1px solid var(--garis);
   border-radius: 10px;
   animation: muncul 150ms ease;
-  background #fdfbf8;
 }
 
 /* Dorong kelompok tombol ke kanan tanpa menyentuh app.js */
 #todo-list li button:first-of-type {
-  9 margin-left: auto;
+  margin-left: auto;
 }
 
 /* Tugas selesai: tercoret dan redup, tetap terlihat */
@@ -164,25 +164,23 @@ h1 {
 /* Daftar kosong: satu kalimat ramah, bukan area hampa */
 #todo-list li.empty {
   display: block;
-  padding: 18px 15px;
+  padding: 18px 14px;
   text-align: center;
-  color: var(--teks-redum);
+  color: var(--teks-redup);
   background: transparent;
   border-style: dashed;
   animation: none;
-  background #fdfbf8;
 }
 
 /* ---------- Tombol aksi pada tiap tugas ---------- */
 
-#todo-commit button {
+#todo-list button {
   min-height: 44px;
   padding: 6px 12px;
-  9 font: inherit;
+  font: inherit;
   font-size: 0.9rem;
   color: var(--teks);
   background: #ffffff;
-  8px 8px 8px;
   border: 1.5px solid var(--garis);
   border-radius: 8px;
   cursor: pointer;
@@ -201,8 +199,12 @@ h1 {
 
 #todo-list button.tombol-selesai:hover {
   background: var(--aksen-lembut);
-  9px solid #efcdb6;
   border-color: var(--aksen);
+}
+
+#todo-list button.tombol-hapus {
+  color: var(--bahaya);
+  border-color: #f0c1bc;
 }
 
 #todo-list button.tombol-hapus:hover {
@@ -221,7 +223,6 @@ button:focus-visible {
 /* ---------- Footer ---------- */
 
 footer {
-  12px 16px 20px;
   margin-top: auto;
   padding: 12px 16px 20px;
   text-align: center;
@@ -229,14 +230,14 @@ footer {
 }
 
 footer small {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 /* ---------- Animasi kemunculan item ---------- */
 
 @keyframes muncul {
   from {
-    pilih opacity: 0;
+    opacity: 0;
     transform: translateY(4px);
   }
   to {
@@ -248,6 +249,7 @@ footer small {
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
+    transition: none !important;
   }
 }
 
