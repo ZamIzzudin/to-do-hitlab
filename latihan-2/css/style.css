@@ -1,1 +1,127 @@
-PLACEHOLDER_L2CSS
+/* ============================================================
+   LATIHAN 2 - css/style.css
+   Gaya arena "Tombol Sapa". Struktur foldernya sama dengan
+   template utama: index.html, css/style.css, js/app.js.
+   Kamu tidak perlu menyentuh file ini: pekerjaanmu ada di
+   js/app.js.
+   ============================================================ */
+
+:root {
+  --bg: #faf6f0;          /* putih hangat */
+  --kartu: #ffffff;
+  --garis: #e7ddd2;
+  --teks: #292524;
+  --teks-redup: #6f675f;
+  --aksen: #c2410c;       /* satu warna aksen */
+  --aksen-gelap: #9a3412;
+  --radius: 12px;
+}
+
+html {
+  /* 112.5% = 18px: ukuran dasar nyaman dibaca di proyektor */
+  font-size: 112.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--teks);
+  background-color: var(--bg);
+}
+
+/* Label form: hadir untuk pembaca layar, tak terlihat mata */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.kartu {
+  width: 100%;
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 28px 24px;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(41, 37, 36, 0.06);
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+#nama {
+  width: 100%;
+  padding: 10px 14px;
+  font: inherit;
+  color: inherit;
+  background: #ffffff;
+  border: 2px solid var(--garis);
+  border-radius: 10px;
+  transition: border-color 150ms ease;
+}
+
+#nama::placeholder {
+  color: var(--teks-redup);
+}
+
+#nama:focus {
+  border-color: var(--aksen);
+}
+
+button {
+  min-height: 44px;
+  margin: 12px 8px 0 0;
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--aksen);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+button:hover {
+  background: var(--aksen-gelap);
+}
+
+button:last-of-type {
+  margin-right: 0;
+}
+
+#sapaan {
+  min-height: 1.5em;
+  margin: 20px 0 0;
+  font-size: 1.1rem;
+}
+
+#nama:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--aksen);
+  outline-offset: 2px;
+}
+
+@media (max-width: 420px) {
+  .kartu {
+    margin: 16px auto;
+    padding: 20px 16px;
+  }
+}
