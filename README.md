@@ -16,7 +16,7 @@ Tidak ada `npm`, tidak ada instalasi apa pun. Alternatif: buka lewat VS Code den
 
 Dua arena latihan tersedia di paket ini, dipakai di slide latihan materi:
 
-- **`kotak-percobaan.html`**: arena Latihan 1, safar kartu jurus. Satu file berdiri sendiri, tanpa file JavaScript: semua aksi dilakukan lewat Console (F12). Buka filenya, tempel enam baris pegangan (lihat bagian 3a), lalu coba jurus satu per satu dari kartu jurus materi. Refresh selalu mengembalikan semuanya.
+- **`kotak-percobaan.html`**: arena Latihan 1, jelajah kartu jurus. Satu file berdiri sendiri, tanpa file JavaScript: semua aksi dilakukan lewat Console (F12). Buka filenya, tempel enam baris pegangan (lihat bagian 3a), lalu coba jurus satu per satu dari kartu jurus materi. Refresh selalu mengembalikan semuanya.
 - **`latihan-1/`**: arena Latihan 1 versi folder, dengan `js/app.js` kosong berisi komentar. Dipakai kalau peserta ingin menempel pegangan dan jurus lewat file alih-alih Console.
 - **`latihan-2/`**: arena Latihan 2, tombol sapa. Tugasnya menautkan event `click` ke perubahan elemen. Starter di `latihan-2/js/app.js`; solusi untuk instruktur di `latihan-2/solusi/app.js`.
 
@@ -52,7 +52,7 @@ Cara pakai checkpoint (untuk peserta yang tertinggal): buka folder checkpoint pa
 
 ## 3a. Arena latihan 1: kotak percobaan
 
-Latihan 1 "Safar Kartu Jurus" dipakai di menit 25-29 materi. Arena ada dua bentuk:
+Latihan 1 "Jelajah Kartu Jurus" dipakai di menit 25-29 materi. Arena ada dua bentuk:
 
 - `kotak-percobaan.html` di akar repo: satu file, tanpa JavaScript, murni lewat Console. Ini bentuk yang dipakai di kelas.
 - `latihan-1/`: salinan berfolder dengan `js/app.js` kosong (komentar saja). Tempat melanjutkan di rumah.

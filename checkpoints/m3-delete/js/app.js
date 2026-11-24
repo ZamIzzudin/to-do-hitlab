@@ -1,6 +1,6 @@
 /* CHECKPOINT M3 - DELETE: tambah, tampil, dan hapus tugas. */
 
-// M0: rak tugas kita (data hidup di memori; segar setiap refresh, by design)
+// M0: rak tugas kita (data hidup di memori, jadi kembali ke isi awal setiap refresh)
 let todos = [
   { id: 1, text: "Belajar DOM manipulation", done: true },
   { id: 2, text: "Bikin To-Do List pertama", done: false },

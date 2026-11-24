@@ -1,4 +1,4 @@
-// Kotak Percobaan DOM - arena Latihan 1: safar kartu jurus.
+// Kotak Percobaan DOM - arena Latihan 1: jelajah kartu jurus.
 // File ini sengaja kosong: semua aksi dilakukan lewat Console (F12),
 // bukan lewat file ini. Refresh selalu mengembalikan halaman seperti semula.
 //

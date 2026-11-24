@@ -5,7 +5,7 @@
    M4 selesai/batal, M5 edit, M6 papan skor (bonus).
    ============================================================ */
 
-// M0: rak tugas kita (data hidup di memori; segar setiap refresh, by design)
+// M0: rak tugas kita (data hidup di memori, jadi kembali ke isi awal setiap refresh)
 let todos = [
   { id: 1, text: "Belajar DOM manipulation", done: true },
   { id: 2, text: "Bikin To-Do List pertama", done: false },
