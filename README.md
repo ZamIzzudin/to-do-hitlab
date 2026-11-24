@@ -12,7 +12,27 @@ Template To-Do List untuk sesi live coding **DOM Manipulation with JavaScript** 
 
 Tidak ada `npm`, tidak ada instalasi apa pun. Alternatif: buka lewat VS Code dengan ekstensi Live Server (klik kanan `index.html`, pilih "Open with Live Server"). Karena template ini tidak memakai `fetch`, hasilnya identik dengan membuka file langsung.
 
-## 2. Peta milestone M0-M6
+## 2. Arena latihan
+
+Dua arena latihan tersedia di paket ini, dipakai di slide latihan materi:
+
+- **`kotak-percobaan.html`**: arena Latihan 1, safar kartu jurus. Satu file berdiri sendiri, tanpa file JavaScript: semua aksi dilakukan lewat Console (F12). Buka filenya, tempel enam baris pegangan (lihat bagian 3a), lalu coba jurus satu per satu dari kartu jurus materi. Refresh selalu mengembalikan semuanya.
+- **`latihan-1/`**: arena Latihan 1 versi folder, dengan `js/app.js` kosong berisi komentar. Dipakai kalau peserta ingin menempel pegangan dan jurus lewat file alih-alih Console.
+- **`latihan-2/`**: arena Latihan 2, tombol sapa. Tugasnya menautkan event `click` ke perubahan elemen. Starter di `latihan-2/js/app.js`; solusi untuk instruktur di `latihan-2/solusi/app.js`.
+
+### Ritual tiga gerakan
+
+Simpan (Ctrl+S), refresh (F5), lihat hasilnya. Tiga gerakan ini akan kamu ulang ratusan kali hari ini. Nikmati.
+
+### Tiga masalah paling umum
+
+| Gejala | Penyebab paling sering | Obat |
+| --- | --- | --- |
+| Console sunyi, tidak ada "Halo" | Salah alamat di `src`, atau file belum disimpan | Cek ejaan `js/app.js`, Ctrl+S, refresh |
+| Ada pesan merah di Console | Salah ketik kode | Baca baris pertama pesannya dan nomor barisnya; itu alamat kejadian |
+| Kode berubah tapi layar tidak | Lupa simpan atau lupa refresh | Ritual tiga gerakan |
+
+## 3. Peta milestone M0-M6
 
 HTML dan CSS sudah jadi. Seluruh JavaScript ditulis peserta sendiri di `js/app.js` mengikuti instruktur, bertahap per milestone:
 
@@ -30,7 +50,32 @@ Catatan: **M6 bersifat bonus**, boleh dilewati bila waktu menipis. Aplikasi suda
 
 Cara pakai checkpoint (untuk peserta yang tertinggal): buka folder checkpoint pada milestone terakhir yang selesai di kelas, lalu buka `index.html` di dalamnya. Tiap folder checkpoint berdiri sendiri (HTML + CSS + JavaScript pada tahap itu) supaya cukup dibuka langsung, tanpa menyalin-menempel. Setelah itu, lanjutkan mengetik di `js/app.js` milikmu dari kondisi tersebut.
 
-## 3. Catatan untuk instruktur
+## 3a. Arena latihan 1: kotak percobaan
+
+Latihan 1 "Safar Kartu Jurus" dipakai di menit 25-29 materi. Arena ada dua bentuk:
+
+- `kotak-percobaan.html` di akar repo: satu file, tanpa JavaScript, murni lewat Console. Ini bentuk yang dipakai di kelas.
+- `latihan-1/`: salinan berfolder dengan `js/app.js` kosong (komentar saja). Tempat melanjutkan di rumah.
+
+Langkah main arena:
+
+1. Buka `kotak-percobaan.html` di browser (klik dua kali).
+2. F12, tab Console.
+3. Tempel enam baris pegangan berikut sekali saja:
+
+```js
+const judul = document.getElementById("judul");
+const paragraf = document.getElementById("paragraf");
+const foto = document.getElementById("foto");
+const kolom = document.getElementById("kolom");
+const tombol = document.getElementById("tombol");
+const daftar = document.getElementById("daftar");
+```
+
+4. Coba jurus dari Kartu Jurus materi (Lampiran B): minimal 5 jurus berbeda dari 3 keluarga berbeda. Satu wajib: `classList.toggle`.
+5. Refresh mengembalikan semuanya. Bebas berantakan.
+
+## 4. Catatan untuk instruktur
 
 Urutan demo penutup (setelah M5 atau M6):
 
@@ -41,22 +86,35 @@ Urutan demo penutup (setelah M5 atau M6):
 
 Dan ingat: tidak ada localStorage, file JSON, server, atau `fetch` di repo ini. Itu keputusan desain sesi, bukan kelalaian.
 
-## 4. Pemecahan masalah
+## 5. Pemecahan masalah
 
 - **Halaman kosong, tidak ada apa-apa**: pastikan `<script src="js/app.js"></script>` ada di akhir `<body>` dan path-nya benar.
-- **Error `Cannot read properties of null`**: elemen tidak ketemu. Cek ejaan ID huruf per huruf, dan ingat aturan pagar: `getElementById` tanpa `#`, `querySelector` pakai `#`.
+- **Error `Cannot read properties of null`**: elemen tidak ketemu. Cek ejaan ID huruf per huruf, dan ingat aturan pagar: `getElementById` tanpa pagar, `querySelector` pakai `#`.
 - **Perubahan tidak muncul**: simpan file, lalu hard refresh (`Ctrl+F5` atau `Cmd+Shift+R`) untuk melewati cache.
 
-## 5. Struktur folder
+## 6. Struktur folder
 
 ```
 .
 ├── README.md
 ├── index.html
+├── kotak-percobaan.html   (arena Latihan 1, satu file, tanpa JavaScript)
 ├── css/
 │   └── style.css
 ├── js/
-│   └── app.js
+│   └── app.js             (file live coding: kamu yang mengisi)
+├── latihan-1/
+│   ├── index.html         (kotak percobaan, salinan latihan-1)
+│   └── js/
+│       └── app.js         (kosong: aksi lewat Console)
+├── latihan-2/
+│   ├── index.html         (tombol sapa)
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── app.js         (starter: kamu yang mengisi)
+│   └── solusi/
+│       └── app.js         (referensi instruktur)
 ├── checkpoints/
 │   ├── m1-render/     (index.html + css/ + js/ versi M1)
 │   ├── m2-create/
@@ -68,7 +126,7 @@ Dan ingat: tidak ada localStorage, file JSON, server, atau `fetch` di repo ini. 
     └── app.js         (solusi lengkap, identik M6, untuk review instruktur)
 ```
 
-## 6. Kontrak penamaan
+## 7. Kontrak penamaan
 
 ID, kelas, dan nama fungsi berikut terikat dengan materi slide dan naskah live coding. Jangan diganti tanpa koordinasi dengan penyusun materi:
 
